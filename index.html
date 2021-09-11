@@ -5,14 +5,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Resume Viktor Klimenko</title>
+
+  <!-- fonts start -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"> 
+  <!-- fonts end -->
+
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <!-- main section -->
-  <div>
+  <div class="main_wrapper">
     <!-- main content section -->
-    <main>
+    <main class="main_content">
       <!-- about me section -->
-      <div>
+      <div class="about_me">
         <h2>
           Front-End Developer
         </h2>
@@ -26,23 +34,23 @@
       </div>
 
       <!-- my projects section -->
-      <div>
+      <div class="my_projects">
         <h3>Projects</h3>
 
         <ol>
           <li>
             <a href="https://viktor-gif.github.io/react-creativia">https://viktor-gif.github.io/react-creativia</a>
-            <span>...............</span>
+            <span>.........................</span>
             <span>[ ReactJS, HTML5, CSS3 ]</span>
           </li>
           <li>
             <a href="https://viktor-gif.github.io/viktor-gif-react">https://viktor-gif.github.io/viktor-gif-react</a>
-            <span>...............</span>
+            <span>........................</span>
             <span>[ ReactJS ]</span>
           </li>
           <li>
             <a href="https://viktor-gif.github.io/mogo">https://viktor-gif.github.io/mogo</a>
-            <span>...............</span>
+            <span>.............................................</span>
             <span>[ HTML5, CSS3 ]</span>
           </li>
         </ol>
@@ -50,10 +58,10 @@
       </div>
 
       <!-- my work experience -->
-      <div>
+      <div class="work_experience">
         <h3>Work Experience</h3>
         <!-- company 1 -->
-        <div>
+        <div class="work_experience_item">
           <h4>Front-End Developer <span>Freelance</span></h4>
           <p>September 2019 - up to now | Country</p>
           <ul>
@@ -73,7 +81,7 @@
           </ul>
         </div>
         <!-- company 2 -->
-        <div>
+        <div class="work_experience_item">
           <h4>Manager <span>Roga & Kopyta New</span></h4>
           <p>March 2015 - October 2018 | Country</p>
           <ul>
@@ -89,7 +97,7 @@
           </ul>
         </div>
         <!-- company 3 -->
-        <div>
+        <div class="work_experience_item">
           <h4>Manager <span>Roga & Kopyta LLC</span></h4>
           <p>June 2014 - February 2015 | Country</p>
           <ul>
@@ -106,7 +114,7 @@
         </div>
       </div>
       <!-- my education -->
-      <div>
+      <div class="my_education">
         <h3>Education</h3>
         <!-- education 1 -->
         <div>
@@ -118,71 +126,74 @@
     </main>
 
     <!-- sidebar-section -->
-    <aside>
-      <img src="img/IMG-35f23ec5adbc4141560b42f517c93430-V.jpg">
+    <aside class="sidebar">
+      <div class="sidebar_avatar">
+        <img src="img/IMG-35f23ec5adbc4141560b42f517c93430-V.jpg">
+      </div>
 
       <!-- contacts-section -->
-      <div>
-        <h3>Contacts</h3>
+      <div class="contacts_section">
+        <h3 class="sidebar_section_title">Contacts</h3>
         <div>
-          <span>C:</span>
-          <a href="tel:+3890961444250">+38 (096) 144 42 50</a>
+          <span class="contacts_section_type">C:</span>
+          <a class="contacts_section_link contacts_section_link_tel" href="tel:+3890961444250">+38 (096) 144 42 50</a>
         </div>
         <div>
-          <span>E:</span>
-          <a href="klim.viktor.ua@gmail.com">klim.viktor.ua@gmail.com</a>
+          <span class="contacts_section_type">E:</span>
+          <a class="contacts_section_link" href="klim.viktor.ua@gmail.com">klim.viktor.ua@gmail.com</a>
         </div>
       </div>
 
       <!-- tech skills -->
-      <div>
-        <h3>Tech Skills</h3>
-        <ul>
-          <li>
-            HTML5
+      <div class="tech_skills_sections">
+        <h3 class="sidebar_section_title">Tech Skills</h3>
+        <ul class="tech_skills_list">
+          <li class="tech_skills_item">
+            <span class="tech_skills_item_text">HTML5</span>
           </li>
-          <li>
-            CSS3
+          <li class="tech_skills_item">
+            <span class="tech_skills_item_text">CSS3</span>
           </li>
-          <li>
-            GIT
+          <li class="tech_skills_item">
+            <span class="tech_skills_item_text">GIT</span>
           </li>
-          <li>
-            JavaScript
+          <li class="tech_skills_item">
+            <span class="tech_skills_item_text">JavaScript</span>
           </li>
-          <li>
-            TypeScript
+          <li class="tech_skills_item">
+            <span class="tech_skills_item_text">TypeScript</span>
           </li>
-          <li>
-            React.js
+          <li class="tech_skills_item">
+            <span class="tech_skills_item_text">React.js</span>
           </li>
-          <li>
-            PHP
+          <li class="tech_skills_item">
+            <span class="tech_skills_item_text">PHP</span>
           </li>
-          <li>
-            SQL
+          <li class="tech_skills_item">
+            <span class="tech_skills_item_text">SQL</span>
           </li>
         </ul>
       </div>
 
       <!-- soft skills -->
-      <div>
-        <h3>Soft Skills</h3>
-        <ul>
-          <li>
-            purposefulness
+      <div class="sidebar_soft_skills">
+        <h3 class="sidebar_section_title">Soft Skills</h3>
+        <ul class="soft_skills_list">
+          <li class="soft_skills_item">
+            <span class="soft_skills_item_text">purposefulness</span>
           </li>
-          <li>
-            Agile
+          <li class="soft_skills_item">
+            <span class="soft_skills_item_text">Agile</span>
           </li>
-          <li>
-            GTD
+          <li class="soft_skills_item">
+            <span class="soft_skills_item_text">GTD</span>
           </li>
-          <li>
-            Teamwork
+          <li class="soft_skills_item">
+            <span class="soft_skills_item_text">Teamwork</span>
           </li>
         </ul>
       </div>
+    
     </aside>
   </div>
 </body>
