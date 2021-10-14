@@ -10,11 +10,15 @@ body {
 
 
 .main_wrapper {
-    display: flex;
-    flex-direction: row-reverse;
-    width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(3 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: "ava main main"
+                        "sidebar main main";
+    gap: 0;
+    align-items: start;
+    max-width: 1200px;
     margin: 50px auto;
-    flex-wrap: wrap;
     background-color: #fff;
     box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.1);
 }
@@ -24,7 +28,7 @@ body {
 
 /* main-section start */
 .main_content {
-    width: 830px;
+    grid-area: main;
     padding: 100px 90px;
 }
 
@@ -64,7 +68,7 @@ body {
     font-size: 14px;
     line-height: 24px;
     color: #595959;
-    width: 400px;
+    max-width: 400px;
 }
 
 /* my projects section */
@@ -185,8 +189,7 @@ body {
 
 /* sidebar-section start */
 .sidebar {
-    width: 370px;
-    padding: 40px 0;
+    grid-area: sidebar;
     background-color: #1E2939;
 }
 .sidebar li {
@@ -194,10 +197,21 @@ body {
 }
 
 /* avatar */
+.sidebar_avatar  {
+    padding-top: 40px;
+    background-color: #1E2939;
+}
+.sidebar_avatar {
+    height: auto;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
 .sidebar_avatar img {
     width: 100%;
 }
-
+.sidebar_info {
+    padding: 50px 40px;
+}
 /* contacts */
 .contacts_section_type {
     font-style: normal;
@@ -230,9 +244,8 @@ body {
 }
 
 .contacts_section,
-.tech_skills_sections,
-.sidebar_soft_skills {
-    margin: 50px 0 0 40px;
+.tech_skills_sections {
+    margin-bottom: 50px;
 }
 
 .sidebar_section_title {
@@ -242,6 +255,7 @@ body {
     line-height: 27px;
     color: #fff;
     margin-bottom: 10px;
+    margin-top: 0;
 }
 
 /*soft skills*/
