@@ -11,12 +11,12 @@ body {
 
 .main_wrapper {
     display: grid;
-    grid-template-columns: repeat(3 1fr);
-    grid-template-rows: auto;
-    grid-template-areas: "ava main main"
-                        "sidebar main main";
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: "avatar main"
+                        "sidebar main";
     gap: 0;
-    align-items: start;
+    align-items: stretch;
     max-width: 1200px;
     margin: 50px auto;
     background-color: #fff;
@@ -187,6 +187,20 @@ body {
 
 /* main-section end */
 
+/* avatar */
+
+.avatar {
+    grid-area: avatar;
+    height: fit-content;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    padding-top: 40px;
+    background-color: #1E2939;
+}
+.avatar img {
+    width: 100%;
+}
+
 /* sidebar-section start */
 .sidebar {
     grid-area: sidebar;
@@ -196,22 +210,11 @@ body {
     background-color: inherit;
 }
 
-/* avatar */
-.sidebar_avatar  {
-    padding-top: 40px;
-    background-color: #1E2939;
-}
-.sidebar_avatar {
-    height: auto;
-    margin-bottom: 0;
-    padding-bottom: 0;
-}
-.sidebar_avatar img {
-    width: 100%;
-}
+
 .sidebar_info {
     padding: 50px 40px;
 }
+
 /* contacts */
 .contacts_section_type {
     font-style: normal;
@@ -275,3 +278,75 @@ body {
 
 /* sidebar-section end */
 
+@media screen and (max-width: 1200px) {
+    .main_content {
+        grid-area: main;
+        padding: 80px 70px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .main_wrapper {
+        margin: 40px 0;
+    }
+    .main_content {
+        grid-area: main;
+        padding: 50px 40px;
+    }
+    .sidebar_info {
+        padding: 30px 20px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .main_wrapper {
+        margin: 30px 0;
+    }
+    .main_content {
+        grid-area: main;
+        padding: 30px 20px;
+    }
+    .sidebar_info {
+        padding: 20px 10px;
+    }
+    .avatar {
+        padding-top: 20px;
+    }
+}
+@media screen and (max-width: 575px) {
+    .main_wrapper {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: "avatar"
+                            "main"
+                            "sidebar";
+        margin: 20px 0;
+        box-shadow: none;
+    }
+    .avatar {
+        padding: 0;
+        background-color: inherit;
+    }
+    .sidebar_info {
+        padding: 20px 20px;
+    }
+    .about_me_name {
+        margin: 0 0 5px 0;
+        font-size: 30px;
+        line-height:40px;
+    }
+    .about_me {
+        margin-bottom: 30px;
+    }
+    .about_me_description {
+        
+        margin: 0 0 20px 0;
+        line-height: 24px;
+    }
+    .my_projects {
+        margin: 0 0 30px 0;
+    }
+    .work_experience {
+        margin: 0 0 30px 0;
+    }
+}
